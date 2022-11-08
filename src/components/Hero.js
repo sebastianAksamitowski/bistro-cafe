@@ -10,7 +10,7 @@ import { fadeIn, staggerContainer } from '../variants';
 const Hero = () => {
   const { pretitle, title, subtitle, btnText } = heroData;
   return (
-    <section className='min-h-[980px] bg-hero bg-cover'>
+    <section className='min-h-[980px] bg-hero bg-cover' id='home'>
       {/* header */}
       <Header />
       <div className='container mx-auto min-h-[980px] flex justify-center items-center'>

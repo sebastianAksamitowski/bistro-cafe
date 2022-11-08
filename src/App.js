@@ -7,6 +7,7 @@ import Team from './components/Team';
 import Testimonial from './components/Testimonial';
 import Reservation from './components/Reservation';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Testimonial />
       <Reservation />
       <Footer />
+      <ScrollToTop />
       <div className='h-[380px] md:h-[370px]'></div>
     </div>
   );

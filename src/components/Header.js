@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { Link } from 'react-scroll';
+
 import Nav from '../components/Nav';
 import Socials from '../components/Socials';
 import LogoWhite from '../assets/img/header/logo-white.png';
@@ -94,7 +96,12 @@ const Header = () => {
             variants={fadeIn('down', 'tween', 1.2, 1.4)}
             className='order-1 lg:order-none lg:ml-[11rem]'
           >
-            <a href='#'>
+            <Link
+              to='home'
+              className='cursor-pointer transition-all'
+              smooth={true}
+              duration={1300}
+            >
               {/* if header is active make logo 90x90 px else 107x107 px */}
               <img
                 className={`${
@@ -103,7 +110,7 @@ const Header = () => {
                 src={LogoWhite}
                 alt=''
               />
-            </a>
+            </Link>
           </motion.div>
           {/* social icons */}
           <motion.div
@@ -119,7 +126,7 @@ const Header = () => {
             animate={nav ? 'show' : ''}
             className='absolute bg-accent w-[310px] h-[50vh] right-0 lg:left-0 top-[100px] bottom-0 z-50 rounded-lg shadow-xl'
           >
-            <Nav />
+            <Nav nav={nav} setNav={setNav} />
           </motion.div>
         </div>
       </motion.div>
